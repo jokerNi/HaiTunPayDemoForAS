@@ -15,8 +15,8 @@ repositories {
 ```
 在dependencies标签下添加如下配置：[demo配置](/app/build.gradle)
 ```java
-// haitunsdk-1.0.0为sdk在libs目录下的文件名
-compile (name:'haitunsdk-1.0.0', ext:'aar');
+// haitunsdk-1.0.1为sdk在libs目录下的文件名
+compile (name:'haitunsdk-1.0.1', ext:'aar');
 ```
 ####第三步：
 
@@ -37,7 +37,11 @@ AndroidManifest中添加如下配置：[demo配置](/app/src/main/AndroidManifes
 <!--<meta-data android:name="HAITUN_CREATE_URL" android:value="http://p.ylsdk.com"/>-->
 ```
 
-所需权限配置：`<uses-permission android:name="android.permission.INTERNET"/>`
+所需权限配置：`<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>`
 
 ####第四步：
 将Demo中`HaiTunPayDemoForAS/app/src/main/java/com/xiao/ht/kum/`目录下的`wxapi`文件夹([demo目录位置戳这里](/app/src/main/java/com/xiao/ht/kum/))复制到您项目主Moudle下`src/main/java/com/xiao/ht/kum/`目录下。
