@@ -15,8 +15,8 @@ repositories {
 ```
 在dependencies标签下添加如下配置：[demo配置](/app/build.gradle)
 ```java
-// haitunsdk-1.0.1为sdk在libs目录下的文件名
-compile (name:'haitunsdk-1.0.1', ext:'aar');
+// haitunsdk-1.0.2为sdk在libs目录下的文件名
+compile (name:'haitunsdk-1.0.2', ext:'aar');
 ```
 ####第三步：
 
