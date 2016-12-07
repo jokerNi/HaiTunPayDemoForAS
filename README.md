@@ -53,7 +53,12 @@ AndroidManifest中添加如下配置：[demo配置](/app/src/main/AndroidManifes
 
 
 ####第五步：
-在自定义的Application的onCreate中进行SDK初始化 [demo代码](/app/src/main/java/com/longyou/haitunpay/App.java)
+初始化SDK有以下三种方式：(以下三种方式，选择其中一种即可)
+
+1. 在AndroidManifest.xml的application节点配置android:name="com.longyou.haitunsdk.HaiTunApp"
+2. 如果已经自定义了Application，可让自定义的Application继承HaiTunApp
+3. 如果已经自定义了Application且已经继承了其他第三方Application，则务必在Application的onCreate中调用HaiTunPay.getInstance().init(this)进行初始化SDK [demo代码](/app/src/main/java/com/longyou/haitunpay/App.java)
+
 ```java
 // 如果在AndroidManifest文件中配置了HAITUN_WECHAT_KEY及HAITUN_WECHAT_MERID，
 // 则直接调用无参init函数初始化即可，如果未在xm中配置，则调用上面的initWithWechat函数进行初始化
